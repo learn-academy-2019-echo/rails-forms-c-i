@@ -1,5 +1,16 @@
 <h1>Blog Posts</h1>
 
+<%= form_with url: "/blog_posts", local: true do %>
+  <label for="title">Title</label>
+  <input type="text" name="title" />
+  <br />
+  <label for="content">Content</label>
+  <textarea name="content"></textarea>
+
+  <br />
+  <input type="submit" value="Submit" />
+<% end %>
+
 <ul>
   <% @posts.each do |post| %>
     <li>
